@@ -55,6 +55,8 @@ public class IntakeDbContext :
     public DbSet<TestEntity> TestEntities { get; set; }
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Machine> Machines { get; set; }
+    public DbSet<Sensor> Sensors { get; set; }
+    public DbSet<Process> Processes { get; set; }
     #endregion
 
     public IntakeDbContext(DbContextOptions<IntakeDbContext> options)

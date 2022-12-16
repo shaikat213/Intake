@@ -19,5 +19,12 @@ public class IntakeApplicationAutoMapperProfile : Profile
         CreateMap<Machine, MachineDto>();
         CreateMap<MachineDto, Machine>();
         CreateMap<MachineInputDto, Machine>();
+
+        CreateMap<Sensor, SensorDto>();
+        CreateMap<SensorDto, Sensor>();
+        CreateMap<SensorInputDto, Sensor>();
+
+        CreateMap<Process, ProcessDto>();
+        CreateMap<ProcessDto, Process>();
     }
 }
