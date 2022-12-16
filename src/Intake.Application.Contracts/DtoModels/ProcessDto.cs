@@ -17,6 +17,7 @@ namespace Intake.DtoModels
         public string ProcessName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public string ProcessTime { get; set; }
         public DateTime OnlineFrom { get; set; }
     }
 }
