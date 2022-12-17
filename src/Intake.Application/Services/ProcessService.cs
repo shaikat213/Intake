@@ -93,7 +93,7 @@ namespace Intake.Services
                                     "; Pump10 : " + (item.Sensor?.Pump10 == 1 ? "On" : "Off") +
                                     "; Pump5 : " + (item.Sensor?.Pump5 == 1 ? "On" : "Off") +
                                     "; Dra in Sensor : " + (item.Sensor?.DraInSensor == 1 ? "On" : "Off") +
-                                    "; Water Level: ml- : " + item.Sensor?.WaterTemp,
+                                    "; Water Level: ml- : " + item.Sensor?.WaterLevel,
                         ProcessName = item.ProcessName,
                         ProcessTime = "Start : " + item.StartDate.ToString() +
                                       "; End : " + item.EndDate.ToString(),
