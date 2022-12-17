@@ -17,4 +17,13 @@ namespace Intake.DtoModels
         public string DraInSensorName { get; set; }
         public string WaterLevel { get; set; }
     }
+
+    public class SensorSearchDto : EntityDto<int>
+    {
+        public string WaterTemp { get; set; }
+        public int? Pump10 { get; set; }
+        public int? Pump5 { get; set; }
+        public int? DraInSensor { get; set; }
+        public string WaterLevel { get; set; }
+    }
 }
