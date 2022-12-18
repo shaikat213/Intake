@@ -157,231 +157,181 @@ namespace Intake.Services
                     && p.Sensor.Pump10 == 0
                     && p.Sensor.Pump5 == 0
                     && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == sensor.WaterLevel); //00001
+                    && p.Sensor.WaterLevel == sensor.WaterLevel);
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 == 0 && sensor.Pump5 == 0 && sensor.DraInSensor > 0 && sensor.WaterLevel == null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor > 0
-                    && p.Sensor.WaterLevel == null); //00010
+                    items = items.Where(p => p.Sensor.DraInSensor > 0); //00010
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 == 0 && sensor.Pump5 == 0 && sensor.DraInSensor > 0 && sensor.WaterLevel != null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor > 0
+                    items = items.Where(p => p.Sensor.DraInSensor > 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //00011
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 == 0 && sensor.Pump5 > 0 && sensor.DraInSensor == 0 && sensor.WaterLevel == null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == null); //00100
+                    items = items.Where(p => p.Sensor.Pump5 > 0); //00100
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 == 0 && sensor.Pump5 > 0 && sensor.DraInSensor == 0 && sensor.WaterLevel != null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor == 0
+                    items = items.Where(p => p.Sensor.Pump5 > 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //00101
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 == 0 && sensor.Pump5 > 0 && sensor.DraInSensor > 0 && sensor.WaterLevel == null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor > 0
-                    && p.Sensor.WaterLevel == null); //00110
+                    items = items.Where(p => p.Sensor.Pump5 > 0
+                    && p.Sensor.DraInSensor > 0); //00110
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 == 0 && sensor.Pump5 > 0 && sensor.DraInSensor > 0 && sensor.WaterLevel != null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 > 0
+                    items = items.Where(p => p.Sensor.Pump5 > 0
                     && p.Sensor.DraInSensor > 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //00111
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 > 0 && sensor.Pump5 == 0 && sensor.DraInSensor == 0 && sensor.WaterLevel == null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == null); //01000
+                    items = items.Where(p => p.Sensor.Pump10 > 0); //01000
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 > 0 && sensor.Pump5 == 0 && sensor.DraInSensor == 0 && sensor.WaterLevel != null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == sensor.WaterLevel); //01001
+                    items = items.Where(p => p.Sensor.Pump10 > 0 && p.Sensor.WaterLevel == sensor.WaterLevel); //01001
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 > 0 && sensor.Pump5 == 0 && sensor.DraInSensor > 0 && sensor.WaterLevel == null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor > 0
-                    && p.Sensor.WaterLevel == null); //01010
+                    items = items.Where(p => p.Sensor.Pump10 > 0 && p.Sensor.DraInSensor > 0); //01010
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 > 0 && sensor.Pump5 == 0 && sensor.DraInSensor > 0 && sensor.WaterLevel != null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor > 0
+                    items = items.Where(p => p.Sensor.Pump10 > 0 && p.Sensor.DraInSensor > 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //01011
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 > 0 && sensor.Pump5 > 0 && sensor.DraInSensor == 0 && sensor.WaterLevel == null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == null); //01100
+                    items = items.Where(p => p.Sensor.Pump10 > 0
+                    && p.Sensor.Pump5 > 0); //01100
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 > 0 && sensor.Pump5 > 0 && sensor.DraInSensor == 0 && sensor.WaterLevel != null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 > 0
+                    items = items.Where(p => p.Sensor.Pump10 > 0
                     && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor == 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //01101
+
                 }
                 else if (sensor.WaterTemp == null && sensor.Pump10 > 0 && sensor.Pump5 > 0 && sensor.DraInSensor > 0 && sensor.WaterLevel != null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == null
-                    && p.Sensor.Pump10 > 0
+                    items = items.Where(p => p.Sensor.Pump10 > 0
                     && p.Sensor.Pump5 > 0
                     && p.Sensor.DraInSensor > 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //01111
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 == 0 && sensor.Pump5 == 0 && sensor.DraInSensor == 0 && sensor.WaterLevel == null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == null); //10000
+                    items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp); //10000
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 == 0 && sensor.Pump5 == 0 && sensor.DraInSensor == 0 && sensor.WaterLevel != null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor == 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //10001
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 == 0 && sensor.Pump5 == 0 && sensor.DraInSensor > 0 && sensor.WaterLevel == null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor > 0
-                    && p.Sensor.WaterLevel == null); //10010
+                    && p.Sensor.DraInSensor > 0); //10010
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 == 0 && sensor.Pump5 == 0 && sensor.DraInSensor > 0 && sensor.WaterLevel != null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor > 0
+                    items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp && p.Sensor.DraInSensor > 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //10011
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 == 0 && sensor.Pump5 > 0 && sensor.DraInSensor == 0 && sensor.WaterLevel == null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == null); //10100
+                    && p.Sensor.Pump5 > 0); //10100
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 == 0 && sensor.Pump5 > 0 && sensor.DraInSensor == 0 && sensor.WaterLevel != null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 == 0
                     && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor == 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //10101
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 == 0 && sensor.Pump5 > 0 && sensor.DraInSensor > 0 && sensor.WaterLevel == null)
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 == 0
-                    && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor > 0
-                    && p.Sensor.WaterLevel == null); //10110
+                    items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp && p.Sensor.Pump5 > 0
+                    && p.Sensor.DraInSensor > 0); //10110
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 == 0 && sensor.Pump5 > 0 && sensor.DraInSensor > 0 && sensor.WaterLevel != null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 == 0
                     && p.Sensor.Pump5 > 0
                     && p.Sensor.DraInSensor > 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //10111
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 > 0 && sensor.Pump5 == 0 && sensor.DraInSensor == 0 && sensor.WaterLevel == null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == null); //11000
+                    && p.Sensor.Pump10 > 0); //11000
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 > 0 && sensor.Pump5 == 0 && sensor.DraInSensor == 0 && sensor.WaterLevel != null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == sensor.WaterLevel); //11001
+                    && p.Sensor.Pump10 > 0 && p.Sensor.WaterLevel == sensor.WaterLevel); //11001
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 > 0 && sensor.Pump5 == 0 && sensor.DraInSensor > 0 && sensor.WaterLevel == null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor > 0
-                    && p.Sensor.WaterLevel == null); //11010
+                    && p.Sensor.Pump10 > 0 && p.Sensor.DraInSensor > 0); //11010
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 > 0 && sensor.Pump5 == 0 && sensor.DraInSensor > 0 && sensor.WaterLevel != null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                    && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 == 0
-                    && p.Sensor.DraInSensor > 0
+                    && p.Sensor.Pump10 > 0 && p.Sensor.DraInSensor > 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //11011
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 > 0 && sensor.Pump5 > 0 && sensor.DraInSensor == 0 && sensor.WaterLevel == null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
                     && p.Sensor.Pump10 > 0
-                    && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor == 0
-                    && p.Sensor.WaterLevel == null); //11100
+                    && p.Sensor.Pump5 > 0); //11100
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 > 0 && sensor.Pump5 > 0 && sensor.DraInSensor == 0 && sensor.WaterLevel != null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
                     && p.Sensor.Pump10 > 0
                     && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor == 0
                     && p.Sensor.WaterLevel == sensor.WaterLevel); //11101
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 > 0 && sensor.Pump5 > 0 && sensor.DraInSensor > 0 && sensor.WaterLevel == null)
                 {
                     items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
                     && p.Sensor.Pump10 > 0
                     && p.Sensor.Pump5 > 0
-                    && p.Sensor.DraInSensor > 0
-                    && p.Sensor.WaterLevel == null); //11110
+                    && p.Sensor.DraInSensor > 0); //11110
+
                 }
                 else if (sensor.WaterTemp != null && sensor.Pump10 > 0 && sensor.Pump5 > 0 && sensor.DraInSensor > 0 && sensor.WaterLevel != null)
                 {
@@ -395,18 +345,21 @@ namespace Intake.Services
 
                 else
                 {
-                    items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp
-                                          || p.Sensor.Pump10 == sensor.Pump10
-                                          || p.Sensor.Pump5 == sensor.Pump5
-                                          || p.Sensor.DraInSensor == sensor.DraInSensor
-                                          || p.Sensor.WaterLevel == sensor.WaterLevel);
+                    items = items.Where(p => p.Sensor.WaterTemp == sensor.WaterTemp 
+                                          || p.Sensor.WaterTemp == null
+                                          || p.Sensor.Pump10 > 0 
+                                          || p.Sensor.Pump10 == 0
+                                          || p.Sensor.Pump5 > 0 
+                                          || p.Sensor.Pump5 == 0
+                                          || p.Sensor.DraInSensor > 0 
+                                          || p.Sensor.DraInSensor == 0
+                                          || p.Sensor.WaterLevel == sensor.WaterLevel || p.Sensor.WaterLevel == null);
                 }
                 list = new List<ProcessDto>();
                 foreach (var item in items)
                 {
                     var customer = await _customerRepository.FirstOrDefaultAsync(c => c.Id == item.CustomerId);
                     var machine = await _machineRepository.FirstOrDefaultAsync(c => c.Id == item.MachineId);
-                    //var sensor = await _sensorRepository.FirstOrDefaultAsync(c => c.Id == item.SensorId);
                     list.Add(new ProcessDto()
                     {
                         Id = item.Id,
